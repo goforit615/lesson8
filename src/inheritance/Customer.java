@@ -10,10 +10,11 @@ public class Customer {
     public Customer() {
         customerGrade = "SILVER";   // 기본 등급
         bonusRatio = 0.01;  // 보너스 포인트 기본 적립 비율
+        System.out.println("Customer() 생성자 호출 ");
     }
 
     public int calcPrice(int price) {
-        bonusPoint += price * bonusPoint;    // 보너스 포인트 계산
+        bonusPoint += price * bonusRatio;    // 보너스 포인트 계산
         return price;
     }
 
